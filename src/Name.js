@@ -1,9 +1,17 @@
 export default function Name (props) {
-  function handleFirstChange (event) {
+  function handleUserChange (key, event) {
+    // user[key] = value
     props.setUser({
       ...props.user,
-      firstName: event.target.value
+      [key]: event.target.value
     })
+  }
+  function handleFirstChange (event) {
+    // props.setUser({
+    //   ...props.user,
+    //   firstName: event.target.value
+    // })
+    handleUserChange('firstName', event)
   }
   return (
     <>
@@ -16,12 +24,7 @@ export default function Name (props) {
       <p>Last Name</p>
       <input 
         value={props.user.lastName}
-        onChange={(event) => {
-          props.setUser({
-            ...props.user,
-            lastName: event.target.value
-          })
-        }}
+        onChange={(event) => handleUserChange('lastName', event)}
       />
     </>
   )

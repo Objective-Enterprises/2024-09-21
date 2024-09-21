@@ -1,3 +1,5 @@
+import './style.css'
+
 export default function List (props) {
   // const questions = [
   //   { first: 1, second: 9, answer: 10, correct: true },
@@ -8,8 +10,15 @@ export default function List (props) {
 
   const rows = props.questions.map((answer, index) => {
     const correct = answer.correct ? 'Yes' : 'No'
+    // const color = answer.correct
+    //   ? 'green'
+    //   : 'red'
+    // const style = { color }
     return (
-      <tr key={index}>
+      <tr
+        key={index}
+        className={answer.correct ? 'correct' : 'incorrect'}
+      >
         <td>{answer.first}</td>
         <td>{answer.second}</td>
         <td>{answer.answer}</td>

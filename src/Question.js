@@ -25,6 +25,7 @@ export default function Question (props) {
   }
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Question</h2>
       <p>{first} + {second} =</p>
       <input onChange={handleChange} />
       <button>Submit</button>

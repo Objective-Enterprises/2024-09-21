@@ -8,6 +8,7 @@ function App() {
   console.log('questions', questions)
 
   const [name, setName] = useState('dorothy')
+  const [lastName, setLastName] = useState('parker')
 
   return (
     <>

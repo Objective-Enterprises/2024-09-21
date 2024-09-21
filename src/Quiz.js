@@ -18,6 +18,7 @@ export default function Quiz (props) {
 
   return (
     <>
+      <h2>Ready</h2>
       <p>Are you ready to start the quiz?</p>
       <button onClick={handleReady}>Ready!!!</button>
     </>

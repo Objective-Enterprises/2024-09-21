@@ -16,6 +16,10 @@ export default function Question () {
     const total = first + second
     const answerNumber = Number(answer.current)
     const correct = answerNumber === total
+    const question = {
+      first, second, answer: answerNumber, correct
+    }
+    console.log('question', question)
   }
   return (
     <form onSubmit={handleSubmit}>

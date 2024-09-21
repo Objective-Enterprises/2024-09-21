@@ -1,12 +1,12 @@
 export default function List () {
-  const answers = [
+  const questions = [
     { first: 1, second: 9, answer: 10, correct: true },
     { first: 1, second: 5, answer: 6, correct: true },
     { first: 3, second: 10, answer: 15, correct: false },
     { first: 0, second: 0, answer: 0, correct: true },
   ]
 
-  const rows = answers.map((answer, index) => {
+  const rows = questions.map((answer, index) => {
     const correct = answer.correct ? 'Yes' : 'No'
     return (
       <tr key={index}>

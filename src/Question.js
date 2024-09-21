@@ -1,6 +1,7 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
-export default function Question () {
+export default function Question (props) {
+
   // const [answer, setAnswer] = useState('')
   const answer = useRef()
   function handleChange (event) {
@@ -19,7 +20,8 @@ export default function Question () {
     const question = {
       first, second, answer: answerNumber, correct
     }
-    console.log('question', question)
+    const newQuestions = [...props.questions, question]
+    props.setQuestions(newQuestions)
   }
   return (
     <form onSubmit={handleSubmit}>

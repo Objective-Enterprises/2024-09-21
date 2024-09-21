@@ -1,11 +1,10 @@
 import { useState } from "react"
+import Question from "./Question"
 
 export default function Quiz () {
   const [ready, setReady] = useState(false)
   if (ready) {
-    return (
-      <input />
-    )
+    return <Question />
   }
 
   function handleReady () {

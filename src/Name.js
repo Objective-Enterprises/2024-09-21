@@ -1,14 +1,27 @@
 export default function Name (props) {
-  function handleChange (event) {
-    props.setName(event.target.value)
+  function handleFirstChange (event) {
+    props.setUser({
+      ...props.user,
+      firstName: event.target.value
+    })
   }
   return (
     <>
       <h2>Name</h2>
-      <p>What is your name?</p>
+      <p>First Name</p>
       <input
-        value={props.name}
-        onChange={handleChange}
+        value={props.user.firstName}
+        onChange={handleFirstChange}
+      />
+      <p>Last Name</p>
+      <input 
+        value={props.user.lastName}
+        onChange={(event) => {
+          props.setUser({
+            ...props.user,
+            lastName: event.target.value
+          })
+        }}
       />
     </>
   )

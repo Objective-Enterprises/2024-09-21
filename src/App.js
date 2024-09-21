@@ -7,13 +7,17 @@ function App() {
   const [questions, setQuestions] = useState([])
   console.log('questions', questions)
 
-  const [name, setName] = useState('dorothy')
-  const [lastName, setLastName] = useState('parker')
+  const [user, setUser] = useState({
+    firstName: 'dorothy',
+    lastName: 'parker'
+  })
 
   return (
     <>
-      <h1>Quiz App ({name})</h1>
-      <Name name={name} setName={setName} />
+      <h1>
+        Quiz App ({user.firstName} {user.lastName})
+      </h1>
+      <Name user={user} setUser={setUser} />
       <Quiz
         questions={questions}
         setQuestions={setQuestions}

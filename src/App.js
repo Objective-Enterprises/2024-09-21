@@ -1,5 +1,6 @@
 import Quiz from "./Quiz";
 import List from './List';
+import Name from "./Name";
 import { useState } from "react";
 
 function App() {
@@ -7,14 +8,11 @@ function App() {
   console.log('questions', questions)
 
   const [name, setName] = useState('dorothy')
-  function handleChange (event) {
-    setName(event.target.value)
-  }
+
   return (
     <>
       <h1>Quiz App ({name})</h1>
-      <p>What is your name?</p>
-      <input value={name} onChange={handleChange} />
+      <Name name={name} setName={setName} />
       <Quiz
         questions={questions}
         setQuestions={setQuestions}

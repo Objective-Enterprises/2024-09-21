@@ -1,4 +1,5 @@
 import Quiz from "./Quiz";
+import List from './List';
 import { useState } from "react";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <p>What is your name?</p>
       <input value={name} onChange={handleChange} />
       <Quiz />
+      <List />
     </>
   )
 }

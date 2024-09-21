@@ -13,13 +13,9 @@ export default function Question () {
 
   function handleSubmit (event) {
     event.preventDefault()
-    console.log('answer.current', answer.current)
     const total = first + second
-    console.log('total', total)
     const answerNumber = Number(answer.current)
-    console.log('answerNumber', answerNumber)
     const correct = answerNumber === total
-    console.log('correct', correct)
   }
   return (
     <form onSubmit={handleSubmit}>
